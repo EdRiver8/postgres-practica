@@ -107,7 +107,7 @@ create table Asientos(
 	asiento_id serial primary key,
     funcion_id int references Funciones(funcion_id) not null,
     numero_asiento varchar(10) not null,
-    tipo_asiento varchar(6) not null check (tipo_asiento in ('GENERAL', 'PREFERENCIAL'))
+    tipo_asiento varchar(15) not null check (tipo_asiento in ('GENERAL', 'PREFERENCIAL'))
 );
 
 insert into Asientos(funcion_id, numero_asiento, tipo_asiento)
